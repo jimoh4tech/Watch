@@ -1,0 +1,90 @@
+:root {
+    --color-background: #FFF9F6;
+    --color-navigation: #4B3B36;
+    --color--primary: #FF8A47;
+    --color--secondary: #FFF0E8;
+    --color--tertiary: #fe6f1a63;
+    --color-text: #333333;
+    --color-text-2: #897b72;
+    --shadow-primary: 0 .5rem 5rem var(--color--tertiary);
+    --shadow-secondary: 0rem 3rem 5rem var(--color--secondary);
+
+}
+
+@mixin responsive ($breakpoint) {
+    @if $breakpoint == phone-small {
+        @media only screen and (max-width: 30em) {@content}; //480px
+    }
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) {@content}; //600px
+    }
+    @if $breakpoint == phone-large {
+        @media only screen and (max-width: 43.75em) {@content}; //700px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) {@content}; //900px
+    }
+    @if $breakpoint == tab-medium {
+        @media only screen and (max-width: 65.63em) {@content}; //1050px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) {@content}; //1200px
+    }
+    @if $breakpoint == mini-lap {
+        @media only screen and (max-width: 83.75em) {@content}; //1340px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 93.75em) {@content}; //1500px
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @include responsive(big-desktop){
+        font-size: 70%;
+    }
+
+    @include responsive(mini-lap){
+        font-size: 57%;
+    } 
+    
+    @include responsive(tab-land){
+        font-size: 52.7%;
+    } 
+    
+    @include responsive(tab-medium){
+        font-size: 51%;
+    } 
+
+    @include responsive(tab-port){
+        font-size: 49%;
+    } 
+
+    @include responsive(phone-large){
+        font-size: 47%;
+    }
+    
+    @include responsive(phone-small){
+        font-size: 38%;
+    }
+    
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-background);
+}

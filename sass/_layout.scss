@@ -1,0 +1,301 @@
+.content {
+    margin: 5rem;
+    @include responsive(tab-port){
+        margin: 1.5rem;
+    } 
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        height: 3rem;
+
+        &-icon {
+            width: 3rem;
+            height: 5rem;
+            margin-right: 1rem;
+        }
+
+        &-text {
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 40%;
+
+        @include responsive(tab-medium){
+            width: 50%;
+        }
+
+        @include responsive(tab-port){
+            width: 60%;
+        }
+
+        @include responsive(phone){
+            display: none;
+        }
+
+        &-icon {
+            display: flex;
+            position: relative;
+
+            &-main {
+                width: 4.5rem;
+                height: 4.5rem;
+                background-color: var(--color--primary);
+                fill: #fff;
+                border-radius: 1.3rem;
+                padding: 1rem;
+            }
+
+            &-text {
+                background-color: #fff;
+                color: var(--color--primary);
+                border-radius: 50%;
+                font-size: .8rem;
+                height: 1.75rem;
+                width: 1.75rem;
+                position: absolute;
+                top: -.3rem;
+                right: -.3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    &__navigation {
+        display: flex; 
+        justify-content: space-between; 
+        width: 80%;
+
+        
+    }
+
+    &__item {
+        color: var(--color-navigation);
+        list-style: none;
+        font-size: 1.7rem;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    &__nav {
+        background-color: #fff;
+        height: 4rem;
+        width: 5rem;
+        display: none;
+
+        @include responsive(phone){
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: .3rem;
+        }
+        &-line {
+            background-color: var(--color--primary);
+            width: 5rem;
+            height: .5rem;
+            border-radius: 1.3rem;
+            
+        }
+    }
+}
+
+section {
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.home {
+    height: 60rem;
+    background-color: var(--color--secondary);
+    border-radius: 2rem;
+    padding: 5rem;
+
+    @include responsive(phone-small){
+        height: 45rem;
+        padding: 2rem;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__image {
+        border-radius: 50%;
+        background-color: #fff;
+        display: flex; 
+        padding: 5%;
+        justify-content: center;
+        align-items: center;
+
+        &-icon {
+            width: 90%;
+            height: 90%;
+        }
+
+        @include responsive(tab-land){
+            width: 35%;
+            height: 90%;
+        }
+
+        @include responsive(phone-large){
+            width: 30%;
+        }
+        @include responsive(phone){
+            display: none;
+        }
+    }
+
+    &__content {
+        width: 41%;
+
+        @include responsive(mini-lap) {
+            width: 42%;
+        }  
+        
+        @include responsive(tab-land) {
+            width: 45%;
+        }
+        @include responsive(tab-land) {
+            width: 52.8%;
+        }
+        @include responsive(tab-port){
+            width: 54%;
+        }
+        @include responsive(phone-large){
+            width: 61%;
+        }
+
+        @include responsive(phone){
+            width: 90%;
+            margin: 0 5%;
+        }
+
+        @include responsive(phone-small){
+            width: 100%;
+            margin: 0;
+        }
+        &-button {
+            margin-top: 3rem;
+            
+        }
+    }
+
+}
+
+
+.features {
+    margin-top: 10rem;
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 36%;
+
+        @include responsive(tab-medium){
+            margin: 0 32%;
+        }
+
+        @include responsive(phone-small){
+            margin: 0;
+        }
+        
+    }
+
+    &__buttom {
+        margin-top: 10rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        @include responsive(phone-small){
+            flex-direction: column;
+        }
+    }
+}
+
+.aboutus {
+    height: 20rem;
+    background-color: var(--color--secondary);
+    margin: 5rem 0;
+
+    display: flex;
+
+    @include responsive(phone){
+        flex-direction: column;
+    }
+    @include responsive(phone){
+        margin-bottom: 45rem;
+    }
+}
+
+.comments {
+    margin: 10rem 0;
+
+}
+
+.products {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 31.8%;
+        
+        @include responsive(tab-medium){
+            margin: 0 30%;
+        }
+        @include responsive(phone-small){
+            margin: 0;
+        }
+    }
+
+
+    &__middle {
+        margin-top: 5rem;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        @include responsive(phone-large){
+            flex-direction: column;
+        }
+    }
+
+    &__buttom {
+        width: 50%;
+        margin-top: 5rem;
+
+        @include responsive(mini-lap) {
+            width: 85%;
+        } 
+    }
+}
+
+footer {
+    background-color: var(--color--secondary);
+    margin-top: 13rem;
+}
