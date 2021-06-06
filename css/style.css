@@ -487,7 +487,8 @@ section {
   height: 20rem;
   background-color: var(--color--secondary);
   margin: 5rem 0;
-  display: flex; }
+  display: flex;
+  flex-direction: row; }
   @media only screen and (max-width: 37.5em) {
     .aboutus {
       flex-direction: column; } }
