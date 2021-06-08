@@ -9,6 +9,10 @@
     display: flex;
     justify-content: space-between;
 
+    @include responsive(phone){
+        margin-top: 5rem;
+    }
+
     &__logo {
         font-size: 2rem;
         display: flex;
@@ -191,7 +195,13 @@ section {
         &-button {
             margin-top: 3rem;
             
+            @include responsive(phone){
+                display: flex;
+                justify-content: center;
+            }
         }
+
+        
     }
 
 }
@@ -222,17 +232,16 @@ section {
         margin-top: 10rem;
         display: flex;
         flex-wrap: wrap;
-
-        @include responsive(phone-small){
-            flex-direction: column;
-        }
     }
 }
 
 .aboutus {
     height: 20rem;
-    background-color: var(--color--secondary);
     margin: 5rem 0;
+    background-color: var(--color--secondary);
+    @include responsive(phone){
+        height: 60rem;
+    }
 
     display: flex;
     flex-direction: row;
@@ -240,8 +249,17 @@ section {
     @include responsive(phone){
         flex-direction: column;
     }
-    @include responsive(phone){
-        margin-bottom: 45rem;
+
+    &__top {
+        display: none;
+
+        @include responsive(phone){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--color-background);
+        }
     }
 }
 
@@ -281,7 +299,7 @@ section {
         width: 100%;
         justify-content: space-between;
 
-        @include responsive(phone-large){
+        @include responsive(phone){
             flex-direction: column;
         }
     }

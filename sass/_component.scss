@@ -39,6 +39,10 @@
             font-size: 4rem;
         } 
 
+        @include responsive(phone){
+            text-align: center;
+        }
+
         @include responsive(phone-small){
             font-size: 3rem;
         }
@@ -124,11 +128,6 @@
 
     @include responsive(phone-large){
         width: 47%;
-    }
-
-    @include responsive(phone-small){
-        width: 80%;
-        margin: 5% 10%;
     }
 
     &__icon {
@@ -282,14 +281,14 @@
     width: 30%;
     box-shadow: var(--shadow-secondary);
 
-    @include responsive(phone-large){
-        width: 50%;
-        margin: 3% 25%;
+    @include responsive(phone){
+        width: 70%;
+        margin: 3% 15%;
     }
 
     @include responsive(phone-small){
-        width: 70%;
-        margin: 3% 15%;
+        width: 90%;
+        margin: 3% 5%;
     }
 
     &__photo {
@@ -356,12 +355,20 @@
             width: 40%;
             margin-bottom: 5%;
         }
+    }
 
-        @include responsive(phone-small){
-            width: 80%;
-            margin: 10%;
+    &__connect {
+        @include responsive(phone-large){
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    &__connection {
+        @include responsive(phone-large){
+            display: flex;
             justify-content: center;
             align-items: center;
+            margin-left: 30%;
         }
     }
 }
