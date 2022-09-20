@@ -9,15 +9,15 @@
 
 ## Desktop View
 
-[watch-ecommerce-website-header](/1.JPG)
-[watch-ecommerce-website-features](/2.JPG)
-[watch-ecommerce-website-products](/3.JPG)
-[watch-ecommerce-website-footer](/4.JPG)
+![watch-ecommerce-website-header](/1.JPG)
+![watch-ecommerce-website-features](/2.JPG)
+![watch-ecommerce-website-products](/3.JPG)
+![watch-ecommerce-website-footer](/4.JPG)
 
 ## Mobile View
 
-[watch-ecommerce-mobile](/5.jpg)
-[watch-ecommerce-mobile](/6.jpg)
+![watch-ecommerce-mobile](/5.jpg)
+![watch-ecommerce-mobile](/6.jpg)
 
 ## How To clone project
 
